@@ -22,7 +22,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/vardaan412/kafka-project.git'
+                git branch: 'main', url: 'https://github.com/rjsunny05/postgreSQL-proj.git'
             }
         }
 
@@ -30,7 +30,7 @@ pipeline {
             steps {
                 sh '''
                 echo "🔍 Running GitLeaks security scan..."
-                gitleaks detect -v --source . --exit-code 1
+                /usr/local/bin/gitleaks detect -v --source . --exit-code 1
                 '''
             }
         }
