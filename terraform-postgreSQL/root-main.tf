@@ -27,10 +27,3 @@ module "ec2" {
 }
 
 
-module "alb" {
-  source       = "./module/alb"
-  vpc_id       = module.vpc.vpc_id
-  public_subnet_id     = module.vpc.public_subnet_id
-  bastion_sg_id        = module.security_groups.bastion_sg_id
-  target_ids    = module.ec2.instance_ids
-}
