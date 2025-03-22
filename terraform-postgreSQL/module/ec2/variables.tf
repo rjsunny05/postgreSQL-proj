@@ -16,7 +16,7 @@ variable "private_subnet_2_id" {}
 variable "bastion_sg_id" {}
 variable "private_sg_id" {}
 variable "key_name" {
-  default = "CommonKey"
+  default = "project-psql-key"
 }
 variable "key_file_path" {
   default = "/var/lib/jenkins/workspace/project-psql-key.pem"
